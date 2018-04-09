@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    usedCarShop
+</h:head>
+<h:body>
+<h:form id="saveCar">
+    <p:outputLabel value="Brand"></p:outputLabel>
+    <p:inputText value="#{carController.car.brand}"/>
+    <p:outputLabel value="Type"></p:outputLabel>
+    <p:inputText value="#{carController.car.type}"/>
+    <p:outputLabel value="Kilometerstand"></p:outputLabel>
+    <p:inputText value="#{carController.car.kilometer}"/>
+    <p:outputLabel value="Baujahr"></p:outputLabel>
+    <p:inputText value="#{carController.car.manufactoringDate}"/>
+    <p:outputLabel value="Naupreis"></p:outputLabel>
+    <p:inputText value="#{carController.car.manufactoringPrice}"/>
+    <p:commandButton value="Auto speichern" action="#{carController.saveCar}"></p:commandButton>
+</h:form>
+</h:body>
+</html>

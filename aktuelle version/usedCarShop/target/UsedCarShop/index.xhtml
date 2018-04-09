@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    UsedCarShop
+</h:head>
+<h:body>
+
+<h:form action="" id="but-form">
+    <p:button value="Kunde Hinzufügen" id="nonAjax" outcome="./customer.xhtml" href="./customer.xhtml"  />
+    <p:button value="Auto hinzufügen" id="non2Ajax" outcome="./car.xhtml" href="./car.xhtml"/>
+</h:form>
+<br/>
+    <h:form id="invoiceform">
+<p:dataTable var="car" value="#{indexController.getCarList()}" selectionMode="single" selection="#{indexController.selectedCar}" rowKey="car.id">
+    <p:column headerText="Typ">
+        <h:outputText value="#{car.type}" />
+    </p:column>
+
+    <p:column headerText="Marke">
+        <h:outputText value="#{car.brand}" />
+    </p:column>
+
+    <p:column headerText="Kilometerstand">
+        <h:outputText value="#{car.kilometer}" />
+    </p:column>
+
+    <p:column headerText="Verkaufspreis">
+        <h:outputText value="#{car.salePrice}" />
+    </p:column>
+
+    <p:column headerText="Baujahr">
+        <h:outputText value="#{car.manufactoringDate}" />
+    </p:column>
+
+</p:dataTable>
+<br/>
+<p:dataTable var="customer" value="#{indexController.getCustomerList()}" selectionMode="single" selection="#{indexController.selectedCusmtomer}" rowKey="customer.id">
+    <p:column headerText="Vormanen">
+        <h:outputText value="#{customer.firstName}" />
+    </p:column>
+
+    <p:column headerText="Nachname">
+        <h:outputText value="#{customer.lastName}" />
+    </p:column>
+
+    <p:column headerText="Addresse">
+        <h:outputText value="#{customer.address}" />
+    </p:column>
+
+</p:dataTable>
+    <br/>
+<p:dataTable var="salesman" value="#{indexController.getSalesmanList()}" selectionMode="single" selection="#{indexController.selectedSalesman}" rowKey="salesman.id">
+    <p:column headerText="Vorname">
+        <h:outputText value="#{salesman.firstName}" />
+    </p:column>
+
+    <p:column headerText="Nachname">
+        <h:outputText value="#{salesman.lastName}" />
+    </p:column>
+
+    <p:column headerText="Mitarbeiternummer">
+        <h:outputText value="#{salesman.employeeNumber}" />
+    </p:column>
+</p:dataTable>
+        <p:commandButton value="Rechnung erstellen" actionListener="#{indexController.generateInvoice()}" update="invoice"></p:commandButton>
+
+    </h:form>
+    <br/>
+    <br/>
+    <br/>
+    <h:form id="invoice">
+    <p:dataTable var="invoice" value="#{indexController.getInvoiceList()}" rowKey="invoice.price">
+        <p:column headerText="Kunde">
+            <h:outputText value="#{invoice.customer.firstName}" />
+        </p:column>
+
+        <p:column headerText="Verkäufer">
+            <h:outputText value="#{invoice.salesman.firstName}" />
+        </p:column>
+
+        <p:column headerText="Fahrzeug">
+            <h:outputText value="#{invoice.soldCars.brand}" />
+        </p:column>
+        <p:column headerText="Fahrzeug">
+            <h:outputText value="#{invoice.price}" />
+        </p:column>
+    </p:dataTable>
+    </h:form>
+</h:body>
+</html>
