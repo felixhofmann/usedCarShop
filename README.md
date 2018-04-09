@@ -9,13 +9,13 @@ Es können Autos und kunden in Datenbank gespeichert werden.
 
 Der verkaufspreis des Autos berechnet sich automatisch aus den eingegeben Parametern (fiktive berechnung). Diese berechnung findet über die gefahrenen Kilometer, den Neupreis und das Baujahr .
 
-![kundespeichern](./images\kundespeichern.PNG)
+![kundespeichern](./images/kundespeichern.PNG)
 
-![autospeichern](./images\autospeichern.PNG)
+![autospeichern](./images/autospeichern.PNG)
 
 Die Hauptseite bietet eine Übersicht über alle rechnungsrelevanten Daten. Durch auswählen in den Listen der einzelnen Kunden Verkäufer und einem KFZ kann über den Button eine Rechnung erstellt werden.(Rechnung erstellen buggy !!BUTTON MEHRMALS DRÜCKEN!!)
 
-![main view](./images\mainview.PNG)
+![main view](./images/mainview.PNG)
 
 
 
