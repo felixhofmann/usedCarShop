@@ -18,6 +18,7 @@
 <br/>
     <h2>Wählen sie Fahrzeug, Kunde und Verkäufer für die Rechnung</h2>
     <h:form id="invoiceform">
+        <h3>KFZ wählen:</h3>
 <p:dataTable var="car" value="#{indexController.getCarList()}" selectionMode="single" selection="#{indexController.selectedCar}" rowKey="car.id">
     <p:column headerText="Typ">
         <h:outputText value="#{car.type}" />
@@ -41,6 +42,7 @@
 
 </p:dataTable>
 <br/>
+        <h3>Kunde wählen:</h3>
 <p:dataTable var="customer" value="#{indexController.getCustomerList()}" selectionMode="single" selection="#{indexController.selectedCusmtomer}" rowKey="customer.id">
     <p:column headerText="Vormanen">
         <h:outputText value="#{customer.firstName}" />
@@ -56,6 +58,7 @@
 
 </p:dataTable>
     <br/>
+        <h3>Verkäufer wählen:</h3>
 <p:dataTable var="salesman" value="#{indexController.getSalesmanList()}" selectionMode="single" selection="#{indexController.selectedSalesman}" rowKey="salesman.id">
     <p:column headerText="Vorname">
         <h:outputText value="#{salesman.firstName}" />
