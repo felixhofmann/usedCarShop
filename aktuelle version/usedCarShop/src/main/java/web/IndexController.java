@@ -113,6 +113,7 @@ public class IndexController {
     public void generateInvoice(){
         if (selectedCar != null && selectedCusmtomer != null && selectedSalesman != null){
             Invoice invoice = new Invoice(selectedCusmtomer,selectedSalesman,LocalDate.now(),selectedCar,selectedCar.getSalePrice());
+            invoiceFacade.save(invoice);
         }
     }
 }

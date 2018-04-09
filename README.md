@@ -13,7 +13,7 @@ Der verkaufspreis des Autos berechnet sich automatisch aus den eingegeben Parame
 
 ![autospeichern](./images\autospeichern.PNG)
 
-Die Hauptseite bietet eine Übersicht über alle rechnungsrelevanten Daten. Durch auswählen in den Listen der einzelnen Kunden Verkäufer und einem KFZ kann über den Button eine Rechnung erstellt werden.(Rechnung erstellen geht noch nicht)
+Die Hauptseite bietet eine Übersicht über alle rechnungsrelevanten Daten. Durch auswählen in den Listen der einzelnen Kunden Verkäufer und einem KFZ kann über den Button eine Rechnung erstellt werden.(Rechnung erstellen buggy !!BUTTON MEHRMALS DRÜCKEN!!)
 
 ![main view](./images\main view.PNG)
 
