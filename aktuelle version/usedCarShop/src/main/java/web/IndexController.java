@@ -102,17 +102,6 @@ public class IndexController {
 
     @PostConstruct
     public void init(){
-        Car car = new Car("test","test",1500,20000,12000,1993,false);
-        carFacade.save(car);
-
-        Customer customer = new Customer("hans","peter","hapeweg33");
-        customerFacade.save(customer);
-
-        Salesman salesman = new Salesman("fred","heuerlich","A554");
-        salesmanFacade.save(salesman);
-
-        Invoice invoice = new Invoice(customer,salesman,LocalDate.of(2013,6,22),car,car.getSalePrice());
-        invoiceFacade.save(invoice);
 
         salesmanList = salesmanFacade.findAll();
         invoiceList = invoiceFacade.findAll();

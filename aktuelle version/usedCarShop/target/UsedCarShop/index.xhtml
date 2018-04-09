@@ -16,6 +16,7 @@
     <p:button value="Auto hinzufügen" id="non2Ajax" outcome="./car.xhtml" href="./car.xhtml"/>
 </h:form>
 <br/>
+    <h2>Wählen sie Fahrzeug, Kunde und Verkäufer für die Rechnung</h2>
     <h:form id="invoiceform">
 <p:dataTable var="car" value="#{indexController.getCarList()}" selectionMode="single" selection="#{indexController.selectedCar}" rowKey="car.id">
     <p:column headerText="Typ">
@@ -75,7 +76,7 @@
     <br/>
     <br/>
     <h:form id="invoice">
-    <p:dataTable var="invoice" value="#{indexController.getInvoiceList()}" rowKey="invoice.price">
+    <p:dataTable var="invoice" value="#{indexController.getInvoiceList()}" rowKey="invoice.id">
         <p:column headerText="Kunde">
             <h:outputText value="#{invoice.customer.firstName}" />
         </p:column>
@@ -87,7 +88,7 @@
         <p:column headerText="Fahrzeug">
             <h:outputText value="#{invoice.soldCars.brand}" />
         </p:column>
-        <p:column headerText="Fahrzeug">
+        <p:column headerText="Rechnungsbetrag">
             <h:outputText value="#{invoice.price}" />
         </p:column>
     </p:dataTable>

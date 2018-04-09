@@ -38,14 +38,11 @@ public class CarController {
     public void calcSellPrice(Car c){
         double price = c.getManufactoringPrice() - c.getKilometer()*0.01;
         int yearsused = LocalDate.now().getYear() - c.getManufactoringDate();
-
         price = price - (200 *yearsused);
-
         if (price < 100){
             price = 100;
         }
         int p = (int)Math.round(price);
-
         c.setSalePrice(p);
 
     }
